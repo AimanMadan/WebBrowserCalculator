@@ -11,7 +11,7 @@ class Calculator {
         this.op = undefined;
     }
 
-    delete() {
+    delete(del) {
         this.second_op = this.second_op.toString().slice(0, -1)
     }
 
@@ -35,7 +35,29 @@ class Calculator {
     
 
     compute() {
-        // Implementation here
+        let computation;
+        const prev = parseFloat(this.first_op);
+        const current = parseFloat(this.second_op);
+        if (isNaN(prev) || isNaN(current)) return;
+        switch (this.operation) {  // Changed 'op' to 'operation'
+            case '+':
+                computation = prev + current;
+                break;
+            case '-':
+                computation = prev - current;
+                break;
+            case '*':
+                computation = prev * current;
+                break;
+            case '/':
+                computation = prev / current;
+                break;
+            default:
+                return;
+        }
+        this.second_op = computation;
+        this.operation = undefined;  // Changed 'op' to 'operation'
+        this.first_op = '';
     }
 
     updateDisplay() {
@@ -78,13 +100,19 @@ operationButtons.forEach(button => {
 })
 
 //All-Clear Button
-    ACButton.addEventListener('click', button => {
+ACButton.addEventListener('click', button => {
         calculator.clear()
         calculator.updateDisplay()
     })
 
 //delete Button
-    delButton.addEventListener('click', button => {
+delButton.addEventListener('click', button => {
         calculator.delete()
         calculator.updateDisplay()
     })
+
+//equals Button
+equalsButton.addEventListener('click', button => {
+    calculator.compute()
+    calculator.updateDisplay()
+})
