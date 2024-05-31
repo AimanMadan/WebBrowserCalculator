@@ -32,14 +32,12 @@ class Calculator {
         this.second_op = ''
         }
 
-    
-
     compute() {
         let computation;
         const prev = parseFloat(this.first_op);
         const current = parseFloat(this.second_op);
         if (isNaN(prev) || isNaN(current)) return;
-        switch (this.operation) {  // Changed 'op' to 'operation'
+        switch (this.operation) {  
             case '+':
                 computation = prev + current;
                 break;
@@ -49,22 +47,26 @@ class Calculator {
             case '*':
                 computation = prev * current;
                 break;
-            case '/':
+            case '÷':
                 computation = prev / current;
                 break;
             default:
                 return;
         }
         this.second_op = computation;
-        this.operation = undefined;  // Changed 'op' to 'operation'
+        this.operation = undefined;  
         this.first_op = '';
     }
+
+
 
     updateDisplay() {
         this.secondOpTextElement.innerText = this.second_op;
         this.firstOpTextElement.innerText = this.first_op;
     }
 }
+
+
 
 //linking constants to the HTML Elements
 
