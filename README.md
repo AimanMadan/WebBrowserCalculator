@@ -1,4 +1,4 @@
-# Simple Calculator
+# Web Browser Calculator
 
 This is a standalone project, and is built with HTML, CSS, and JavaScript.
 
