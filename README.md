@@ -1,6 +1,6 @@
 # Simple Calculator
 
-Welcome to the Simple Calculator project! This is a standalone project, and is built with HTML, CSS, and JavaScript.
+This is a standalone project, and is built with HTML, CSS, and JavaScript.
 
 ## Project Overview
 
