@@ -5,7 +5,7 @@ This is a standalone project, and is built with HTML, CSS, and JavaScript.
 
 ## Project Overview
 
-The Simple Calculator is a user-friendly calculator that can perform basic arithmetic operations. It features a clean and minimalistic design, making it easy for users to input their calculations.
+This Calculator is a user-friendly calculator that can perform basic arithmetic operations. It features a clean and minimalistic design, making it easy for users to input their calculations.
 
 ## Features
 
